@@ -2,6 +2,7 @@ class UIHandler {
     constructor() {
         this.pageTitle = document.title;
         this.titleTxt = document.getElementById("page-title");
+        this.updateTxt = document.getElementById("update-time");
         let indexBtn = this.getButton("index-link");
         let writerBtn = this.getButton("writer-link");
         let readerBtn = this.getButton("reader-link");
@@ -36,6 +37,19 @@ class UIHandler {
         }
         if (readerBtn) {
             readerBtn.textContent = userText.pageTitles[2];
+        }
+    }
+
+    updateTimeDisplay() {
+        if (this.updateTxt) {
+            const now = new Date();
+            let timeString = now.toLocaleString();
+
+            if (this.pageTitle === "Reader") {
+                this.updateTxt.textContent = `${userText.timeTexts[0]} ${timeString}`;
+            } else if (this.pageTitle === "Writer") {
+                this.updateTxt.textContent = `${userText.timeTexts[1]} ${timeString}`;
+            }
         }
     }
 
