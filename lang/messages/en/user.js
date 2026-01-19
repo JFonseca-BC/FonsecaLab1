@@ -24,8 +24,11 @@ const buttons = [
     removeButton,
 ];
 
+const labTitle = "Lab 1: JSON, Object Constructor, localStorage";
+
 window.userText = {
     pageTitles,
     timeTexts,
     buttons,
+    labTitle,
 };
