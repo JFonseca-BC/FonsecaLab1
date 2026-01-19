@@ -37,7 +37,7 @@ class UIHandler {
             this.readerBtn.textContent = userText.pageTitles[2]; // "reader.html"
         }
 
-        
+
         if (this.indexBtn) {
             this.indexBtn.textContent = userText.pageTitles[0]; // "index.html"
         }
@@ -109,7 +109,6 @@ class updateHandler {
         this.notesContainer = document.getElementById("notes-container");
         this.storageKey = "lab1_notes";
         
-        // Bind methods manually since we aren't using arrow functions
         this.removeNote = this.removeNote.bind(this);
         this.addNote = this.addNote.bind(this);
         this.saveNotesFromDOM = this.saveNotesFromDOM.bind(this);
